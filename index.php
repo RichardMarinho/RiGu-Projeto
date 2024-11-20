@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+// Inicializa o carrinho na sessão
+if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = [];
+}
+
+// Adiciona o produto ao carrinho
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
+    $produto = [
+        "nome" => $_POST['nome'],
+        "preco" => $_POST['preco'],
+        "imagem" => $_POST['imagem']
+    ];
+    $_SESSION['carrinho'][] = $produto;
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,9 +33,6 @@
                 <li class="nav-item"><a href="index.php" class="nav-link">Jogos</a></li>
                 <li class="nav-item"><a href="carrinho.php" class="nav-link">Carrinho</a></li>
             </ul>
-        </div>
-        <div class="login-button">
-                <button><a href="cadastro.php">Login</a></button>
         </div>
     </header>
 
@@ -70,6 +87,12 @@
                     <h2>{$produto['nome']}</h2>
                     <p>R$ " . number_format($produto['preco'], 2, ',', '.') . "</p>
                     <button onclick=\"window.location.href='detalhes.php?produto={$nomeProduto}'\">Ver mais</button>
+                    <form method='POST' style='display:inline;'>
+                        <input type='hidden' name='nome' value='{$produto['nome']}'>
+                        <input type='hidden' name='preco' value='{$produto['preco']}'>
+                        <input type='hidden' name='imagem' value='{$produto['imagem']}'>
+                        <button class='addcart' type='submit' name='adicionar'>Adicionar ao Carrinho</button>
+                    </form>
                 </div>
                 ";
             }

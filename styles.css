@@ -7,10 +7,29 @@ body {
 
 header {
     background-color: #333;
-    color: white;
+    display: flex;
     text-align: center;
     padding: 20px 0;
 }
+
+.header-h1 {
+    text-align: left;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ae05ae;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
 
 main {
     padding: 20px;
@@ -34,7 +53,7 @@ main {
 }
 
 .produto img {
-    max-width: 100%;
+    max-width: 80%;
     max-height: 70%;
     border-radius: 5px;
 }
@@ -49,6 +68,10 @@ main {
     color: #666;
 }
 
+button .addcart {
+    margin-top: 80px;
+}
+
 button {
     background-color: #28a745;
     color: white;
@@ -58,6 +81,43 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+    justify-content: center;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+.nav-link:hover {
+    color: #fff;
 }

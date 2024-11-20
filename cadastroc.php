@@ -5,7 +5,7 @@ $user = 'root';
 $password = '';
 $database = 'cadastro';
 
-$conn = new mysqli($host, $user, $password, $database);
+$mysqli = new mysqli($host, $user, $password, $database);
 
 //if ($conn->connect_error) {
     //echo "Erro de conexão ";
