@@ -62,6 +62,7 @@ header a {
     margin-bottom: 10px;
 }
 button {
+   
     padding: 10px;
     background-color: #28a745;
     color: white;
@@ -87,12 +88,20 @@ table th {
     color: white;
 }
 
+header h1 {
+    text-align:center;
+    margin: 70;
+    width: 89%;
+}
+
+
     </style>
 </head>
 <body>
     <header>
+    <button><a href="index.php"><h3>Voltar à Loja</h3></a></button>
+    
         <h1>Seu Carrinho</h1>
-        <a href="index.php">Voltar à Loja</a>
     </header>
     <main>
         <?php if (!empty($_SESSION['carrinho'])): ?>
@@ -114,6 +123,7 @@ table th {
                             <td>
                                 <form method="POST">
                                     <input type="hidden" name="index" value="<?= $index ?>">
+                                    <button type="submit" name="">Comprar</button>
                                     <button type="submit" name="remover">Remover</button>
                                 </form>
                             </td>
@@ -121,9 +131,30 @@ table th {
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <button type="submit" name="">Comprar todos </button>
         <?php else: ?>
             <p>Seu carrinho está vazio.</p>
         <?php endif; ?>
     </main>
+    <footer>
+    <div class="footer-content">
+        <p>&copy; <?= date("Y"); ?> Nossa loja de Jogos ou para os mais próximos GuRi.<p>
+        <ul class="footer-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="carrinho.php">Carrinho</a></li>
+            <li><a href="sobre.php">Sobre Nós</a></li>
+            <li><a href="contato.php">Contato</a></li>  
+          
+            
+        </ul>
+        <h4>Veja nossas redes sociais</h4>
+        <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
+    
