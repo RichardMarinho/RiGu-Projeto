@@ -30,8 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
     <header>
         <div class="nav-list">
             <ul class="nav-item">
-                <li class="nav-item"><a href="index.php" class="nav-link">Jogos</a></li>
-                <li class="nav-item"><a href="carrinho.php" class="nav-link">Carrinho</a></li>
+            <img src="img/logo.png" style="height: 170px;" />
+                <li class="nav-item"><a href="index.php" class="nav-link"><h2>Jogos</h2></a></li>
+                <li class="nav-item"><a href="carrinho.php" class="nav-link"><h2>Carrinho</h2>  </a></li>
             </ul>
         </div>
     </header>
@@ -76,6 +77,71 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
                     "preco" => 84.47,
                     "imagem" => "img/assasinu.png",
                 ],
+                [
+                    "nome" => "FIFA 23",
+                    "preco" => 249.90,
+                    "imagem" => "img/fifa23.png",
+                ],
+                [
+                    "nome" => "The Witcher 3: Wild Hunt",
+                    "preco" => 59.99,
+                    "imagem" => "img/witcher3.jpg",
+                ],
+                [
+                    "nome" => "Cyberpunk 2077",
+                    "preco" => 199.90,
+                    "imagem" => "img/cyberpunk2077.jpg",
+                ],
+                [
+                    "nome" => "Elden Ring",
+                    "preco" => 299.90,
+                    "imagem" => "img/eldenring.jpg",
+                ],
+                [
+                    "nome" => "GTA V",
+                    "preco" => 89.90,
+                    "imagem" => "img/gtav.webp",
+                ],
+                [
+                    "nome" => "Red Dead Redemption 2",
+                    "preco" => 249.90,
+                    "imagem" => "img/rdr2.jpg",
+                ],
+                [
+                    "nome" => "Resident Evil 4 Remake",
+                    "preco" => 289.90,
+                    "imagem" => "img/re4remake.jpg",
+                ],
+                [
+                    "nome" => "Hogwarts Legacy",
+                    "preco" => 319.90,
+                    "imagem" => "img/hogwartslegacy.webp",
+                ],
+                [
+                    "nome" => "God of War: Ragnarok",
+                    "preco" => 349.90,
+                    "imagem" => "img/godofwarragnarok.jpg",
+                ],
+                [
+                    "nome" => "Dark Souls III",
+                    "preco" => 99.90,
+                    "imagem" => "img/darksouls3.jpg",
+                ],
+                [
+                    "nome" => "Far Cry 6",
+                    "preco" => 229.90,
+                    "imagem" => "img/farcry6.webp",
+                ],
+                [
+                    "nome" => "Horizon Forbidden West",
+                    "preco" => 299.90,
+                    "imagem" => "img/horizonfw.webp",
+                ],
+                [
+                    "nome" => "Call of Duty: Modern Warfare II",
+                    "preco" => 319.90,
+                    "imagem" => "img/codmw2.webp",
+                ],
             ];
 
             // Exibe os produtos dinamicamente
@@ -101,7 +167,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
     </main>
 
     <footer>
-        <p>&copy; <?= date("Y"); ?> Loja de Produtos</p>
-    </footer>
+    <div class="footer-content">
+        <p>&copy; <?= date("Y"); ?> Nossa loja de Jogos ou para os mais próximos GuRi.<p>
+        <ul class="footer-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="carrinho.php">Carrinho</a></li>
+            <li><a href="sobre.php">Sobre Nós</a></li>
+            <li><a href="contato.php">Contato</a></li>  
+          
+            
+        </ul>
+        <h4>Veja nossas redes sociais</h4>
+        <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
