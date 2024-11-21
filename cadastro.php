@@ -90,14 +90,14 @@
 <body>
     <div>
     <form action="cadastro.php" method="POST">
-            <h1>Cadastro</h1>
+            <h1>Login</h1>
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="E-mail"> 
             <br>
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="Senha">
             <br>
-            <input type="submit" name="submit" value="Cadastrar">
+            <input type="submit" name="submit" value="Confirmar Login">
         </form>
     </div>
     
