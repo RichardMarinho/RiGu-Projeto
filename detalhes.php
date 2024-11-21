@@ -88,11 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
 </head>
 <body>
 <header>
-        <h1 class="header-h1">Loja de Produtos</h1>
         <div class="nav-list">
             <ul class="nav-item">
-                <li class="nav-item"><a href="index.php" class="nav-link">Jogos</a></li>
-                <li class="nav-item"><a href="carrinho.php" class="nav-link">Carrinho</a></li>
+            <img src="img/logo.png" style="height: 170px;" />
+                <li class="nav-item"><a href="index.php" class="nav-link"><h2>Jogos</h2></a></li>
+                <li class="nav-item"><a href="carrinho.php" class="nav-link"><h2>Carrinho</h2>  </a></li>
             </ul>
         </div>
     </header>
@@ -130,8 +130,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
                     <h2>{$nomeProduto}</h2>
                     <p class='informacao'>{$produto['info']}</p>
                     <p class='preco'>R$ " . number_format($produto['preco'], 2, ',', '.') . "</p>
-                    <button class='addcart' type='submit' name='adicionar'>Adicionar ao Carrinho</button>
-
+                    <button class='addcart' type='submit' name='adicionar'>Comprar</button>
+                    <br>
+                    <br>
+                     <button class='addcart' type='submit' name='adicionar'>Adicionar ao Carrinho</button>
                 </div>
             </div>
             ";
@@ -140,5 +142,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
         }
         ?>
     </main>
+    <footer>
+    <div class="footer-content">
+        <p>&copy; <?= date("Y"); ?> Nossa loja de Jogos ou para os mais próximos GuRi.<p>
+        <ul class="footer-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="carrinho.php">Carrinho</a></li>
+            <li><a href="sobre.php">Sobre Nós</a></li>
+            <li><a href="contato.php">Contato</a></li>  
+          
+            
+        </ul>
+        <h4>Veja nossas redes sociais</h4>
+        <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
